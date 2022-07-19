@@ -1,0 +1,28 @@
+<div class="background">
+<form [formGroup]="loginForm">
+    <div class="imgcontainer">
+      <img src="../../../assets/download.png"  class="avatar">
+    </div>
+  
+    <div class="container">
+      
+      <input type="text" placeholder="Enter email"  [formControl]="email">
+      <span style="color: red;"  [hidden]="email.valid ||  email.untouched">This field is invalid</span>
+  
+      
+      <input type="password" placeholder="Enter Password" [formControl]="password">
+      <span style="color: red;"  [hidden]="password.valid ||  password.untouched">This field is invalid</span>
+          
+      <button [disabled]="loginForm.invalid" (click)="loginUser()">Login</button>
+     
+    </div>
+  
+    
+  </form>
+</div>
+
+
+
+
+
+  

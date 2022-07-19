@@ -7,4 +7,29 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Aproject';
+  toggle = false;
+  seeMore = false;
+  
+  login(e: any) {
+    if (e == true) {
+      this.toggle = true;
+    }
+  }
+
+
+
+  check(e:any){
+    // console.log(e);
+    
+    if (e == true) {
+      this.seeMore = true;
+    }
+    // console.log(this.seeMore);
+    
+  }
+
+  
 }
+
+
+

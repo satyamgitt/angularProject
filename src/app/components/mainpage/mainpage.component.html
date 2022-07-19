@@ -1,0 +1,36 @@
+<!-- NAVBAR -->
+<ul>
+  <li><a href="">Home</a></li>
+  <li class="right"><a href="">About Us</a></li>
+  <li class="right"><a href="">Contact Us</a></li>
+  <li class="right"><a href="">News</a></li>
+</ul>
+<!-- SEARCHBOX -->
+<div class="searchBox">
+ 
+  <input type="text" placeholder="search names" [(ngModel)]="nameSearch">
+
+
+</div>
+
+
+<!-- cards -->
+<div class="gallery">
+
+  <div class="content" *ngFor="let information of store | pipe:nameSearch">
+
+    <i class="fa fa-info-circle"></i>
+    <img [src]="information.img" alt="">
+
+    <div class="overlay">
+    <h3 class="name">{{information.name}}</h3>
+    <p class="status">{{information.status}}</p>
+    <h6 class="birth">{{information.birthday}}</h6>
+  </div>
+
+    <button (click)="seeMore(information)">See more</button>
+
+
+  </div>
+
+</div>
